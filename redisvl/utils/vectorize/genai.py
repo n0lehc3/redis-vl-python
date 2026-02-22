@@ -250,7 +250,9 @@ class GenAIVectorizer(BaseVectorizer):
 
             # Check for credentials
             credentials = api_config.get("credentials") if api_config else None
-            kwargs["project_id"] = project_id
+            kwargs["project"] = (
+                project_id  # genai sdk uses 'project' but keeping 'project_id' for backwards compatibility with VertexAIVectorizer
+            )
             kwargs["location"] = location
             kwargs["credentials"] = credentials
         else:
