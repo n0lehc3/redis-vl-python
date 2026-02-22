@@ -51,19 +51,19 @@ AzureOpenAITextVectorizer
    :members:
 
 
-VertexAIVectorizer
+GenAIVectorizer
 ======================
 
-.. _vertexaivectorizer_api:
+.. _genaivectorizer_api:
 
-.. currentmodule:: redisvl.utils.vectorize.vertexai
+.. currentmodule:: redisvl.utils.vectorize.genai
 
 .. note::
-    For backwards compatibility, an alias ``VertexAITextVectorizer`` is available
-    in the ``redisvl.utils.vectorize.text`` module. This alias is deprecated
-    as of version 0.13.0 and will be removed in a future major release.
+    For backwards compatibility, an alias ``VertexAIVectorizer`` is available
+    in the ``redisvl.utils.vectorize.vertexai`` module. This alias is deprecated
+    as of version 0.15.0 and will be removed in a future major release.
 
-.. autoclass:: VertexAIVectorizer
+.. autoclass:: GenAIVectorizer
    :show-inheritance:
    :members:
 
