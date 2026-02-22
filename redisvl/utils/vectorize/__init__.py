@@ -4,6 +4,7 @@ from redisvl.extensions.cache.embeddings import EmbeddingsCache
 from redisvl.utils.vectorize.base import BaseVectorizer, Vectorizers
 from redisvl.utils.vectorize.bedrock import BedrockVectorizer
 from redisvl.utils.vectorize.custom import CustomVectorizer
+from redisvl.utils.vectorize.genai import GenAIVectorizer
 from redisvl.utils.vectorize.text.azureopenai import AzureOpenAITextVectorizer
 from redisvl.utils.vectorize.text.bedrock import BedrockTextVectorizer
 from redisvl.utils.vectorize.text.cohere import CohereTextVectorizer
@@ -31,6 +32,7 @@ __all__ = [
     "BedrockTextVectorizer",
     "VoyageAIVectorizer",
     "VoyageAITextVectorizer",
+    "GenAIVectorizer",
 ]
 
 
@@ -57,8 +59,8 @@ def vectorizer_from_dict(
         return HFTextVectorizer(**args)
     elif vectorizer_type == Vectorizers.mistral:
         return MistralAITextVectorizer(**args)
-    elif vectorizer_type == Vectorizers.vertexai:
-        return VertexAIVectorizer(**args)
+    elif vectorizer_type == Vectorizers.genai:
+        return GenAIVectorizer(**args)
     elif vectorizer_type == Vectorizers.voyageai:
         return VoyageAIVectorizer(**args)
     else:
